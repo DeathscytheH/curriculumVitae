@@ -1,14 +1,19 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Alejandro H. Pineda
+email: ale.hpineda@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+    Mi curriculum vitae en linea hospedado en Github pages utilizando Jekyll en ingles y español
+baseurl: "/cv" # the subpath of your site, e.g. /blog/
+url: "http://deathscytheh.github.io" # the base hostname & protocol for your site
+twitter_username: deathscytheh
+github_username:  deathscytheh
+facebook_username: deathscythe
+linkedin_username: alehpineda
+name: Alejandro H. Pineda
+address: Torreón Coauila México
+cel: +52 871 186 6100
+cv_esp: H.Pineda.Alejandro.esp.pdf
+cv_ing: H.Pineda.Alejandro.eng.pdf
 
 # Build settings
 markdown: kramdown
