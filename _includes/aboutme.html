@@ -3,6 +3,7 @@
     <div class="container">
         <div class="row">
             
+            {% if page.lang == 'en' %}
             <div class="col-lg-2 col-lg-offset-1">
                 <h5>ABOUT ME</h5>
             </div>
@@ -10,6 +11,17 @@
                 <p> I'm an electronic engineer and a developer. I'm interested in all forms of information and communications technology, but my major focus is on development, mainly Python. I also have skills in other areas like web development and languages, like Java and C. I'm inquisitive, self taught, love to share what I learn, and unafraid of challenges.
                 </p>
             </div>
+            {% endif %}
+
+            {% if page.lang == 'es' %}
+            <div class="col-lg-2 col-lg-offset-1">
+                    <h5>ACERCA DE</h5>
+                </div>
+                <div class="col-lg-6">
+                    <p>Ingeniero electrónico y desarrollador. Me interesan las tecnologías de la información y comunicación. Mi mayor actividad es el desarrollo, principalmente en Python. Tengo habilidades en desarrollo web y en otros lenguajes como Java y C. Soy curioso, autodidacta, me encanta compartir el conocimiento y no le temo a los retos.</p>
+                </div>
+            {% endif %}
+
             
             {% include cv.html %}
 

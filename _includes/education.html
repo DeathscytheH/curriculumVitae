@@ -2,7 +2,8 @@
 <!--EDUCATION DESCRIPTION -->
 <div class="container desc">
     <div class="row">
-
+        <!--EDUCATION DESCRIPTION -->
+            {% if page.lang == 'en' %}
             <div class="col-lg-2 col-lg-offset-1">
                 <h5>EDUCATION</h5>
             </div>
@@ -23,7 +24,33 @@
             <div class="col-lg-3">
                 <p><sm>NOVEMBER 2010</sm></p>
             </div>
+            {% endif %}
 
+            <!-- Educacion -->
+            {% if page.lang == 'es' %}
+                <div class="col-lg-2 col-lg-offset-1">
+                    <h5>EDUCACIÓN</h5>
+                </div>
+                <div class="col-lg-6">
+                    <p><t>Maestría en Ciencias en Ingeniería Eléctrica</t><br/>
+                        Instituto Tecnológico de la Laguna <br/>
+                        <i>Especialidad en Potencia</i>
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <p><sm>JULIO 2012</sm></p>
+                </div>
+    
+                <div class="col-lg-6 col-lg-offset-3">
+                    <p><t>Ingenieria Electrónica</t><br/>
+                        Instituto Tecnológico de la Laguna <br/>
+                        <i>Especialidad en Telecomunicaciones</i>
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <p><sm>NOVIEMBRE 2010</sm></p>
+                </div>
+            {% endif %}
     </div><!--/.row -->
     <br>
     <hr>

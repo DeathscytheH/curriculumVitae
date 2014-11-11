@@ -5,7 +5,12 @@
                 <h1>{{ site.name }}</h1>
                 <br>
                 <br>
+                {% if page.lang == 'en' %}
                 <h3>Electronic Engineer | Python Developer | {{ site.email }}</h3>
+                {% endif %}
+                {% if page.lang == 'es' %}
+                <h3>Ingeniero Electrónico | Desarrollador Python | {{ site.email }}</h3>
+                {% endif %}                
             </div><!--/.col-lg-12 -->
         </div><!--/.row -->
     </div><!--/.container -->

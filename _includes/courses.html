@@ -1,6 +1,7 @@
 <!-- CURSOS DESCRIPTION -->
     <div class="container desc">
         <div class="row">
+            {% if page.lang == 'en' %}
                 <div class="col-lg-2 col-lg-offset-1">
                     <h5>COURSES</h5>
                 </div>
@@ -15,6 +16,40 @@
                     <p><sm>JANUARY 2014</sm></p>
                 </div>
 
+                <div class="col-lg-6 col-lg-offset-3">
+                    <p><t>Intro to Linux Servers</t><br/>
+                        Foris Magna
+                    </p>
+                </div>
+
+                <div class="col-lg-3">
+                    <p><sm>DECEMBER 2013</sm></p>
+                </div>                
+            {% endif %}
+            <!-- CURSOS DESCRIPTION -->
+            {% if page.lang == 'es' %}
+                <div class="col-lg-2 col-lg-offset-1">
+                    <h5>CURSOS</h5>
+                </div>
+                <!-- El primero no tiene offset!-->
+                <div class="col-lg-6">
+                    <p><t>Introducción a la Seguridad Informática</t><br/>
+                        Foris Magna
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <p><sm>ENERO 2014</sm></p>
+                </div>
+                <div class="col-lg-6 col-lg-offset-3">
+                    <p><t>Introducción a Servidores Linux</t><br/>
+                        Foris Magna
+                    </p>
+                </div>
+
+                <div class="col-lg-3">
+                    <p><sm>DICIEMBRE 2013</sm></p>
+                </div>                 
+            {% endif %}
         </div><!--/.row -->
         <br>
         <hr>

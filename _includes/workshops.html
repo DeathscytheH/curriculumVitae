@@ -1,6 +1,8 @@
 <!-- TALLERES DESCRIPTION -->
     <div class="container desc">
         <div class="row">
+            {% if page.lang == 'en' %}
+            <!-- TALLERES DESCRIPTION -->
                 <div class="col-lg-2 col-lg-offset-1">
                     <h5>WORKSHOPS</h5>
                 </div>
@@ -22,8 +24,33 @@
                 <div class="col-lg-3">
                     <p><sm>OCTOBER 2013</sm></p>
                 </div>
+                {% endif %}
 
+                <!-- TALLERES Descripcion -->
+                {% if page.lang == 'es' %}
+                <div class="col-lg-2 col-lg-offset-1">
+                    <h5>TALLERES</h5>
+                </div>
+                <!-- El primero no tiene offset!-->
+                <div class="col-lg-6">
+                    <p><t>Introducción a Python: Simple es mejor que complejo</t><br/>
+                        Instituto Tecnológico de la Laguna
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <p><sm>OCTUBRE 2013</sm></p>
+                </div>
+
+                <div class="col-lg-6 col-lg-offset-3">
+                    <p><t>Arduino: más que un juguete</t><br/>
+                        Instituto Tecnológico de la Laguna
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <p><sm>OCTUBRE 2013</sm></p>
+                </div>                
+                {% endif %}
         </div><!--/.row -->
         <br>
         <hr>
-    </div><!--/.container -->                
+    </div><!--/.container -->

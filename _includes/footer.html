@@ -5,6 +5,7 @@
       <div class="row">
       
         <div class="col-lg-2 col-lg-offset-1">
+          {% if page.lang == 'en' %}
           <h5>CONTACT</h5>
         </div>
         <div class="col-lg-6">
@@ -20,6 +21,25 @@
         </div>
         <div class="col-lg-3">
           <p><sm>SOCIAL NETWORKS</sm></p>
+          {% endif %}
+
+          {% if page.lang == 'es' %}
+          <h5>CONTACTO</h5>
+          </div>
+        <div class="col-lg-6">
+          <p><t>Email</t><br/>
+            {{ site.email }} <br/>
+          </p>
+          <p><t>Dirección</t><br/>
+            {{ site.address }} <br/>
+          </p>
+          <p><t>Telefono</t><br/>
+            {{ site.cel }}<br/>
+          </p>
+        </div>
+        <div class="col-lg-3">
+          <p><sm>REDES SOCIALES</sm></p>
+          {% endif %}          
 
           {% include socialnetworks.html%}
           
