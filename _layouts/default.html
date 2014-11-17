@@ -6,7 +6,33 @@
 
   <body data-spy="scroll" data-offset="0" data-target="#nav">
 
-    {{ content }}
+      {% include header.html %}
+
+      {% include presentation.html %}
+
+      {% include aboutme.html %}
+
+      <section id="resume" name="resume"></section>
+
+      {% include work.html %}
+
+      {% include education.html %}
+
+      {% include conferences.html %}
+
+      {% include workshops.html %}
+
+      {% include papers.html %}
+
+      {% include courses.html %}
+
+      {% include training.html %}
+
+      {% include skills.html %}
+
+      {% include portfolio.html %}
+
+      {% include footer.html %}
 
   </body>
 
