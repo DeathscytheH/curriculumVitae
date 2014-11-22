@@ -1,55 +1,49 @@
 <!-- CONFERENCIAS DESCRIPTION -->
     <div class="container desc">
         <div class="row">
-            <!-- CONFERENCIAS DESCRIPTION -->
-                {% if page.lang == 'en' %}
-                <div class="col-lg-2 col-lg-offset-1">
-                    <h5>CONFERENCES</h5>
-                </div>
-                <!-- El primero no tiene offset!-->
-                <div class="col-lg-6">
-                    <p><t>(in) Security. Tranquility for us</t><br/>
-                        Instituto Tecnologico de la Laguna <br/>
-                    </p>
-                </div>
+            <div class="col-lg-2 col-lg-offset-1">
+            {% if page.lang == 'en' %}
+                <h5>CONFERENCES</h5>
+            {% endif %}
+            {% if page.lang == 'es' %}
+                <h5>CONFERENCIAS</h5>
+            {% endif %}
+            </div>                                   
+            {% for post in site.posts %}
+                {% if post.section == 'conferences' %}
+                    {% if page.lang == 'en' %}
+                        {% if post.br %}
+                            <div class="col-lg-6">
+                        {% else %}
+                            <div class="col-lg-6 col-lg-offset-3">
+                        {% endif %}
+                        <p><t>{{ post.name }}</t><br/>
+                            {{ post.place }}<br/>
+                        </p>
+                    </div>
 
-                <div class="col-lg-3">
-                    <p><sm>JUNE 2014</sm></p>
-                </div>
+                    <div class="col-lg-3">
+                        <p><sm>{{ post.dates }}</sm></p>
+                    </div>                        
+                    {% endif %}
 
-                <div class="col-lg-6 col-lg-offset-3">
-                    <p><t>(in) Security. Tranquility for us</t><br/>
-                        Instituto Tecnologico de Estudios Superiores de Monterrey, Campus Laguna <br/>
-                    </p>
-                </div>
+                    {% if page.lang == 'es' %}
+                        {% if post.br %}
+                            <div class="col-lg-6">
+                        {% else %}
+                            <div class="col-lg-6 col-lg-offset-3">
+                        {% endif %}
+                        <p><t>{{ post.nombre }}</t><br/>
+                            {{ post.lugar }}<br/>
+                        </p>
+                    </div>
 
-                <div class="col-lg-3">
-                    <p><sm>APRIL 2014</sm></p>
-                </div> 
-                {% endif %}
-
-                <!-- CONFERENCIAS -->
-                {% if page.lang == 'es' %}
-                <div class="col-lg-2 col-lg-offset-1">
-                    <h5>CONFERENCIAS</h5>
-                </div>
-                <div class="col-lg-6">
-                    <p><t>Seguridad Informática. Tranquilidad para Nosotros</t><br/>
-                        Instituto Tecnológico de la Laguna <br/>
-                    </p>
-                </div>
-                <div class="col-lg-3">
-                    <p><sm>JUNIO 2014</sm></p>
-                </div>
-                <div class="col-lg-6 col-lg-offset-3">
-                    <p><t>Seguridad Informática. Tranquilidad para Nosotros</t><br/>
-                        Instituto Tecnológico de Estudios Superiores de Monterrey, Campus Laguna <br/>
-                    </p>
-                </div>
-                <div class="col-lg-3">
-                    <p><sm>ABRIL 2014</sm></p>
-                </div>                
-                {% endif %}
+                    <div class="col-lg-3">
+                        <p><sm>{{ post.fecha }}</sm></p>
+                    </div>                        
+                    {% endif %}
+                {% endif %}               
+            {% endfor %}
         </div><!--/.row -->
         <br>
         <hr>

@@ -8,13 +8,13 @@
                 
                 {% for post in site.posts %}
                     {% if post.section == "skills" %}
-                        {% if forloop.index0 | modulo:3 == 1 %}
+                        {% if post.br %}
                             <div class="col-lg-3 centered col-lg-offset-3">
                         {% else %}
                             <div class="col-lg-3 centered">
                         {% endif %}
                         <canvas id="{{ post.id }}" height="130" width="130"></canvas>
-                        <p>{{ post.name }} {{ forloop.index }} {{ forloop.index | modulo:3 }} </p>
+                        <p>{{ post.name }}</p>
                         <br>
                         <script>
                             var doughnutData = [
